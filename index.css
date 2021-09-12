@@ -1,0 +1,110 @@
+h1{
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    width: 98%;
+}
+
+h2{
+
+}
+#upper{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 10%;
+
+}
+
+#upper > div{
+    border-radius: 10px;
+    background-color: darkslategray;
+    height: 330px;
+    background-size: cover;
+    width: 25%;
+    margin-left: 5%;
+    min-width: 200px;
+    border-style: solid;
+
+    /*
+border-style: solid;
+border-color: black;
+border-width: 1px;
+ */
+    float: left;
+}
+
+select{
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    font-family: fantasy;
+    border-radius: 20px;
+}
+
+button{
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: fantasy;
+}
+
+#preview{
+    margin: 5%;
+    display: table;
+    min-width: 500px;
+    border-radius: 10px;
+    height: 50%;
+    width: 85%;
+    clear: both;
+    background-color: darkslategray;
+    border-style: solid;
+}
+
+#preview > div{
+    height: 100%;
+    /*margin-right: 40px;*/
+    float: left;
+           }
+.money{
+}
+#bottomCenter{
+    position: absolute;
+    left: auto;
+    right: auto;
+    margin-left: 35%;
+    margin-right: 35%;
+    align-self: center;
+}
+
+#bottomRight{
+    position: absolute;
+    right: 20px;
+    width: 25%;
+}
+
+img{
+    top: 2px;
+    left: 2px;
+    border-radius: 10px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+button:hover,select:hover{
+    color:deepskyblue;
+}
+
+body{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    display: table;
+    font-family: "Arial Rounded MT Bold";
+    color: white;
+}
