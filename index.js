@@ -14,11 +14,10 @@ function addListeners() {
         .addEventListener('click', function () {
             console.log("test");
             let loanAmount = window.prompt("How much would you like to loan? max: "+myBalance*2)
-            if(myLoan===0 && parseInt(loanAmount)<=2*myBalance){
+            if(myLoan===0 && parseInt(loanAmount)<=2*myBalance && parseInt(loanAmount)>0){
                 myLoan=parseInt(loanAmount);
                 myBalance+=parseInt(loanAmount);
-                document.getElementById('loanBalance').innerHTML=myLoan;
-                document.getElementById('balance').innerHTML=myBalance;
+                updateVals()
                 toggleLoan(true);
             }
         });
@@ -30,9 +29,7 @@ function addListeners() {
             if(myLoan<=0){
                 toggleLoan(false);
             }
-            document.getElementById('loanBalance').innerHTML=myLoan;
-            document.getElementById('salary').innerHTML=mySalary;
-            document.getElementById('balance').innerHTML=myBalance;
+            updateVals()
         });
     //Bank button
     document.getElementById('bankButton')
@@ -46,9 +43,7 @@ function addListeners() {
             }
             myBalance+=mySalary;
             mySalary=0;
-            document.getElementById('loanBalance').innerHTML=myLoan;
-            document.getElementById('salary').innerHTML=mySalary;
-            document.getElementById('balance').innerHTML=myBalance;
+            updateVals()
         });
     //Work button
     document.getElementById('workButton')
@@ -106,11 +101,14 @@ function updateLaptop(){
     document.getElementById('myImg').onerror = function(){
         this.src='https://bitsofco.de/content/images/2018/12/broken-1.png';
     }
+    document.getElementById('description').innerHTML=data[computerId].description;
     document.getElementById('laptopName').innerHTML=data[computerId].title;
 }
 
 function updateVals(){
-
+    document.getElementById('loanBalance').innerHTML=myLoan;
+    document.getElementById('salary').innerHTML=mySalary;
+    document.getElementById('balance').innerHTML=myBalance;
 }
 
 
